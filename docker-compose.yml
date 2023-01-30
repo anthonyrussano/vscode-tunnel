@@ -3,8 +3,6 @@ version: '3.8'
 services:
   vscode-tunnel:
     image: anthonyrussano/vscode-tunnel:latest
-    ports:
-      - 8888:3000
     volumes:
       - workspace:/home/workspace
 volumes:
