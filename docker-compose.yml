@@ -1,0 +1,15 @@
+---
+version: '3.8'
+services:
+  vscode-tunnel:
+    image: anthonyrussano/vscode-tunnel:latest
+    ports:
+      - 8888:3000
+    volumes:
+      - workspace:/home/workspace
+volumes:
+  workspace:
+    driver_opts:
+      type: "nfs"
+      o: "addr=10.32.25.118,nolock,rw,soft,nfsvers=4"
+      device: ":/mnt/prox-pool/Coolnow/docker/vscode/workspace"
